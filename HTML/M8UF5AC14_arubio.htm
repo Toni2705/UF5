@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari 1 d'enregistrament</title>
+</head>
+<body>
+    <h1>Formulari bàsic</h1>
+    <form method="get" action="">
+       <p><strong>Nom:</strong> <input type="text" name="Nom" maxlength="50" placeholder="Lucía"></p>
+       <p><strong>Cognom:</strong> <input type="text" name="Cognom" maxlength="50" placeholder="Hernández"></p>
+       <p><strong>Sexe:</strong> <input type="radio" name="Sexe" value="Home">Home<input type="radio" name="Sexe" value="Dona">Dona</p>
+        <p><strong>Correu Electrònic</strong> <input type="text" name="Correu" placeholder="rdtgod@gmail.com"></p>
+        <p><strong>Marca les següents caselles:</strong></p> 
+        <input type="checkbox" name="Ofertes" value="Ofertes" checked>Vull rebre informació sobre novetats i ofertes</p> 
+        <p><input type="checkbox" name="condicions" value="condicions">Declaro haver llegit i acceptar les condicions generals del programa i la normativa sobre protecció de dades indicada al RGPD</p>
+        <p><input type="submit" value="Enviar"></p>
+        <p><strong>Població:</strong></p>
+        <select>
+            <option value="Arbúcies">Arbúcies</option>
+            <option value="Badalona">Badalona</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Girona">Girona</option>
+            <option value="Vilassar">Vilassar de Mar</option>
+        </select>
+        <p><strong>Descripció:</strong></p>
+        <textarea rows="10" wrap="soft"></textarea>
+    </form>
+</body>
+</html>
