@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari d'enviament</title>
+    <script type="text/javascript">
+        function validar(){
+        var psswd=document.getElementById("psswd").value;
+        var confpsswd=document.getElementById("confpsswd").value;
+        if(psswd==confpsswd){
+        return true;
+        }
+        else{
+        alert("No coincideix");
+        return false;
+        }
+        }
+        </script>
+</head>
+<body>
+    <table align="center" bgcolor="EFEFEF" cellpading="15" cellspacing="10" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <input type="hidden" name="id">
+        <form  method="GET" action="mailto:antoni.rubio@inslapineda.cat" onsubmit="return validar();">
+            <tr>
+                <th colspan="3" align="left" bgcolor="306090" style="color:white">Enviar misatge<img src="./img/gb_reload_s.gif" width="30px" height="30px" align="right"></th>
+            </tr>
+            <tr>
+                <td><strong>Nom:</strong> <input type="text" maxlength="50" name="Nom" placeholder="Antonio Morales"></td> 
+                <td><strong>Contrasenya pel compte:</strong> <input type="password" name="Contrasenya" id="psswd"></td> 
+                <td><strong>Usuari:</strong> <input type="text" name="User" maxlength="8"></td> 
+            </tr>
+            <tr>
+                <td><strong>E-Mail:</strong> <input type="text" method="E-MAIL" placeholder="rdtgod@gmail.com"></td> 
+                <td><strong>Repetició de la contrasenya:</strong> <input type="password" name="Contrasenya" id="confpsswd"></td>
+            </tr>
+            <tr>
+                <td><strong>Imatge:</strong> <input type="text" name="imagen"></td>
+                <td><input type="file" name="imagen" id="imagen" accept="image/*"> <input type="hidden" name="MAX PUJADA" value="4000"></td>
+            </tr>
+            <tr>
+                <td><strong>Arxiu:</strong> <input type="text" name="arxius"></td>
+                <td><input type="file" name="arxius" id="avatar"> <input type="hidden" name="MAX PUJADA" value="4000"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><font size="2">El tamany de l'arxiu i la imatge no pot execir els 4KBytes</font></td>
+            </tr>
+            <tr>
+                <td><strong>Requereixo reposta:</strong></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="resposta" value="Sí">Sí<input type="radio" name="resposta" value="No">No</td>
+            </tr>
+            <tr>
+                <td><strong>Quins jocs t'interessen?</strong> <ul> <li><input type="checkbox" name="League of Legends" value="games">League of Legends</li> <li><input type="checkbox" name="games" value="Valorant">Valorant</li> <li><input type="checkbox" name="games" value="Fifa">Fifa 22</li> <li><input type="checkbox" name="games" value="F1">F1 2021</li></ul></td>
+                <td align="center"><strong>Missatge:</strong></td>
+                
+            </tr>
+            <tr>
+                <td align="center" colspan="3"> <textarea rows="5" cols="45" wrap="soft"></textarea> </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3"><input type="submit" value="Enviar" style="background-color: green;color: white;"><input type="reset" value="Borrar" style="background-color: red; color: white;"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
